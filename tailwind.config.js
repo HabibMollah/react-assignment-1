@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      primary: '#499aed',
-      secondary: '#edf1f5',
-      accent: '#f2f4fa',
-    },
     extend: {
+      colors: {
+        primary: "#499aed",
+        secondary: "#edf1f5",
+        accent: "#f2f4fa",
+      },
       fontFamily: {
-        saira: ['Saira', 'sans-serif'],
+        saira: ["Saira", "sans-serif"],
       },
     },
   },
