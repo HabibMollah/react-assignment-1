@@ -11,6 +11,7 @@ export default function PaginatedCarList() {
   const { setCurrentPage } = useCurrentPageContext();
   useEffect(() => {
     if (page) setCurrentPage(parseInt(page));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const currentPage = page ? parseInt(page, 10) : 1;
   const carsPerPage = 6;
