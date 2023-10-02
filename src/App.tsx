@@ -1,14 +1,15 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import PaginatedCarList from "./components/PaginatedCarList";
 import { useEffect } from "react";
 
 export default function App() {
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/1");
-  }, [navigate]);
+    if (location.pathname === "/") navigate("/1");
+  }, [navigate, location]);
 
   return (
     <>
