@@ -1,15 +1,21 @@
-import CarList from "./components/CarList";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import PaginatedCarList from "./components/PaginatedCarList";
+import { useEffect } from "react";
 
 export default function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/1");
+  }, [navigate]);
+
   return (
     <>
-      <header className="mx-auto mt-2 flex h-[90px] max-w-[1200px] items-center rounded-3xl bg-accent pl-6 font-saira shadow-md">
-        <NavBar />
-      </header>
-      <main className="mx-auto mt-8 max-w-[1200px]">
-        <CarList />
-      </main>
+      <NavBar />
+      <Routes>
+        <Route path="/:page" element={<PaginatedCarList />} />
+      </Routes>
     </>
   );
 }

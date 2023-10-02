@@ -3,19 +3,10 @@ import { LuUsers2 } from "react-icons/lu";
 import { LiaGasPumpSolid } from "react-icons/lia";
 import { BiTachometer } from "react-icons/bi";
 import { RiSteering2Line } from "react-icons/ri";
+import { CarType } from "../types/car";
 
 type Props = {
-  car: {
-    id: number;
-    name: string;
-    released: number;
-    seats: number;
-    fuel: string;
-    transmission: string;
-    mileage: number;
-    rentPerMonth: number;
-    imageURL: string;
-  };
+  car: CarType;
 };
 
 export default function CarCard({ car }: Props) {
