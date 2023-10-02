@@ -4,7 +4,7 @@ import useSearchContext from "../hooks/useSearchContext";
 export default function NavBar() {
   const { searchValue, setSearchValue } = useSearchContext();
   return (
-    <header className="mx-auto mt-2 flex h-[90px] max-w-[1200px] items-center rounded-3xl bg-accent pl-6 font-saira shadow-md">
+    <header className="mx-auto mt-2 flex h-[90px] max-w-[1200px] items-center rounded-3xl bg-accent pl-6 font-saira shadow-[2px_3px_10px_0.5px_#00000024]">
       <nav className="flex gap-6">
         <span className="relative">
           <input

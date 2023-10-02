@@ -5,7 +5,7 @@ import useCurrentPageContext from "../hooks/useCurrentPageContext";
 export default function Footer() {
   const { currentPage, setCurrentPage } = useCurrentPageContext();
   return (
-    <footer className="mx-auto flex max-w-[1200px] items-center gap-3">
+    <footer className="mx-auto mb-4 mt-12 flex h-[70px] max-w-[1200px] items-center justify-end gap-3 rounded-3xl pr-6 shadow-[2px_3px_10px_0.5px_#00000024]">
       <Link
         onClick={() =>
           setCurrentPage(currentPage <= 1 ? currentPage : currentPage - 1)
